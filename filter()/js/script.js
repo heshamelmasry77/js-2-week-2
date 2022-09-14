@@ -2,7 +2,7 @@
 
 //
 // const filteredNumbers = numbers.filter((number) => {
-//     // returen to me in the new array all the numbers which is greater than or equal 4
+//     // return to me in the new array all the numbers which is greater than or equal 4
 //     if (number >= 4) {
 //         return true;
 //     } else {
@@ -79,12 +79,12 @@ const filteredGames = games.filter(({isMultiplayer, rating}) => {
     // if ((isMultiplayer === true) && (rating >= 8)) {
     //     return true;
     // }
-    return (isMultiplayer === true) && (rating >= 8) ? true : false;
+    return (isMultiplayer === true) && (rating >= 8);
 });
 
 // const filteredGames = games.filter(({isMultiplayer, rating}) => ((isMultiplayer === true) && (rating >= 8)));
 
-console.log("filteredGames: ",filteredGames);
+console.log("filteredGames: ", filteredGames);
 
 
 

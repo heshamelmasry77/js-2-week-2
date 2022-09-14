@@ -81,13 +81,13 @@ const products = [
 
 
 // product.isInStock === true
-const totalCost = products.reduce((total, product )=>{
+const totalCost = products.reduce((total, product) => {
     // if(product.isInStock === true){
     //     total += product.price * product.quantity;
     // }
     return product.isInStock === true ? total += product.price * product.quantity : total
 }, 0);
 
-console.log("totalCost: ",totalCost);
+console.log("totalCost: ", totalCost);
 
 // condition ? true : false
