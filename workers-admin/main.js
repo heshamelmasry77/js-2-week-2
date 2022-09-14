@@ -9,6 +9,8 @@ import './style.css'
 const myListContainer = document.querySelector("#my-list-container");
 const API_URL = "https://dummy.restapiexample.com/api/v1/employees"
 
+let someData;
+
 function getEmployees() {
     fetch(API_URL)
         .then(data => {
@@ -22,8 +24,15 @@ function getEmployees() {
                               <p class="text-sm text-gray-500">${employee_age}</p>
                             </div>
                           </li>`
-                }).join('');
+            }).join('');
             myListContainer.innerHTML = newEmployeesData;
+            return employeesData;
+        })
+        .finally((employeesData) => {
+
+            console.log("someData: ", employeesData);
+            someData = "hesh";
+            console.log(someData);
         })
 }
 
